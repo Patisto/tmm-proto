@@ -1,0 +1,18 @@
+{
+  "name": "tmm-proto",
+  "version": "1.0.0",
+  "description": "Terminal Mastery Mentor Prototype",
+  "type": "module",
+  "bin": {
+    "tmm": "./src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js"
+  },
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.2.4",
+    "groq-sdk": "^0.37.0"
+  }
+}
