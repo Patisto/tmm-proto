@@ -2,7 +2,6 @@ import chalk from 'chalk';
 import boxen from 'boxen';
 
 export function formatResponse(response) {
-    // 1. Better Regex to catch code even if the AI forgets the "bash" tag
     const codeBlockRegex = /```(?:[\w-]+)?\n([\s\S]*?)\n```/;
     const match = response.match(codeBlockRegex);
     
@@ -22,17 +21,17 @@ export function formatResponse(response) {
         }
     }
 
-    // 2. High-Visibility Box
+    //  High-Visibility Box
     const boxedExplanation = boxen(explanation, {
         padding: 1,
         margin: { top: 1, bottom: 0 },
         borderStyle: 'round',
-        borderColor: 'magenta', // Magenta stands out on Manjaro/Zsh
+        borderColor: 'magenta', 
         title: '🎓 Mentor',
         titleAlignment: 'center'
     });
 
-    // 3. High-Contrast Command (Using Cyan/Black for maximum visibility)
+
     const label = chalk.bold.yellow('👉 Run this:');
     const styledCommand = command 
         ? chalk.bgCyan.black.bold(`  ${command}  `) 
