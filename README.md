@@ -67,8 +67,6 @@ tmm "how do I find all logs in /var/log?"
 
 ### **Mastery Commands**
 
-* **Check History:** `tmm --history`
-*View a log of everything the Mentor has taught you.*
 * **Offline Mode:** *Just start `ollama serve` and TMM will automatically switch to local mode if your internet drops.*
 
 ---
