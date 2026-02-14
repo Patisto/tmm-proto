@@ -102,5 +102,5 @@ Made with curiosity, clarity, and a love for great CLI UX.
 
 ## 🛡️ License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for more information.
 
