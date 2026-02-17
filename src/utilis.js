@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import boxen from 'boxen';
 
-export function formatResponse(response) {
+export function parseMentorResponse(response) {
     const codeBlockRegex = /```(?:[\w-]+)?\n([\s\S]*?)\n```/;
     const match = response.match(codeBlockRegex);
     
@@ -20,6 +20,12 @@ export function formatResponse(response) {
             command = tickMatch[1].trim();
         }
     }
+
+    return { command, explanation };
+}
+
+export function formatResponse(response) {
+    const { command, explanation } = parseMentorResponse(response);
 
     //  High-Visibility Box
     const boxedExplanation = boxen(explanation, {
