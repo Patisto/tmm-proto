@@ -14,7 +14,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export async function askMentor(question, context) {
    const prompt = `You are a Terminal Mastery Mentor. 
-    User System: Windows (${context.arch})
+    User System: ${context.platform} (${context.arch})
     Current Shell: ${context.shell}
     Question: ${question}
     Provide the exact command and a 1-sentence explanation.`;
