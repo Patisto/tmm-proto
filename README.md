@@ -12,6 +12,7 @@
 * **Hybrid Intelligence:** Uses **Groq** for lightning-fast cloud answers and **Ollama** as an automatic offline fallback.
 * **High Contrast UI:** Designed for visibility on all terminal themes (Dark/Light).
 * **Learning Memory:** Tracks every command you've learned in a local hidden history file.
+* **Safe Execution Flow:** Asks before running suggested commands and sends desktop notifications for long tasks.
 
 ---
 
@@ -68,6 +69,8 @@ tmm "how do I find all logs in /var/log?"
 ### **Mastery Commands**
 
 * **Offline Mode:** *Just start `ollama serve` and TMM will automatically switch to local mode if your internet drops.*
+* **Run Confirmation:** After TMM suggests a command, it asks: `Run this command now? (y/n)`.
+* **Live Output + Alerts:** Approved commands run with real-time terminal output. If a command takes more than 10 seconds, TMM sends a desktop notification with success/error status.
 
 ---
 
